@@ -1,10 +1,10 @@
 # Crypto
 
 
-|   Challenge    | Author |
-| ----------- | ----------- |
-|bragcrid|Parvathy|
-|Primapocalypse|Ankith, Devanand|
-|Sums_n_Diffs|Ankith, Devanand|
-|beginner|Sans|
-|Progressive_Cipher_Shift|APN|
+|   Challenge    | Author | Difficulty |
+| ----------- | ----------- | ----------- |
+|bragcrid|Parvathy|Easy|
+|Primapocalypse|Ankith, Devanand|Medium|
+|Sums_n_Diffs|Ankith, Devanand|Medium|
+|beginner|Sans|Hard|
+|Progressive_Cipher_Shift|APN|Easy|
