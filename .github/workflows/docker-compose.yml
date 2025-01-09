@@ -37,13 +37,13 @@ jobs:
         for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
           if [[ "$file" =~ ^(Pwn|Web)/[a-zA-Z0-9_]+/deployment/.+ ]]; then
             IMAGE_NAME=$(echo -n $file | cut -d "/" -f2)
-	    NORM_IMAGE_NAME=$(echo $IMAGE_NAME | tr A-Z a-z | tr - _)
+	          NORM_IMAGE_NAME=$(echo $IMAGE_NAME | tr A-Z a-z | tr - _)
             CATEGORY=$(echo -n $file | cut -d "/" -f1)
             if [[ " ${built_images[*]} " != *" $IMAGE_NAME "* ]]; then
               echo "building and pushing: $CATEGORY/$IMAGE_NAME/deployment/"
               docker build $CATEGORY/$IMAGE_NAME/deployment/ --tag $NORM_IMAGE_NAME
               built_images+=("$NORM_IMAGE_NAME")
-	      IMAGE_ID=ghcr.io/k1r4/$NORM_IMAGE_NAME 
+	            IMAGE_ID=ghcr.io/k1r4/$NORM_IMAGE_NAME 
               echo "pushing to $IMAGE_ID"
               VERSION=latest
               docker tag $NORM_IMAGE_NAME $IMAGE_ID:$VERSION
