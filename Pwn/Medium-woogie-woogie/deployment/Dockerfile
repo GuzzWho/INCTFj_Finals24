@@ -20,5 +20,5 @@ RUN chown -R root:root /home/ctf
 RUN chmod -R 555 /home/ctf
 
 USER ctf
-EXPOSE 1337
-CMD ./ynetd -p 1337 ./woogie-woogie
+EXPOSE 1338
+CMD ./ynetd -p 1338 ./woogie-woogie

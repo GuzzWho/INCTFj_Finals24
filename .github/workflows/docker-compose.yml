@@ -35,7 +35,7 @@ jobs:
       run: |
         declare -a built_images=()
         for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-          if [[ "$file" =~ ^(Pwn|Web)/[a-zA-Z0-9_]+/deployment/.+ ]]; then
+          if [[ "$file" =~ ^(Pwn|Web)/[a-zA-Z0-9_-]+/deployment/.+ ]]; then
             IMAGE_NAME=$(echo -n $file | cut -d "/" -f2)
             NORM_IMAGE_NAME=$(echo $IMAGE_NAME | tr A-Z a-z | tr - _)
             CATEGORY=$(echo -n $file | cut -d "/" -f1)
